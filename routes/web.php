@@ -11,6 +11,17 @@
 |
 */
 
+use App\Mail\SendMessage;
+use Illuminate\Support\Facades\Mail;
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/mail', function () {
+    Mail::to('test@test.cl')->send(new SendMessage());
+    return new SendMessage();
+});
+
+Route::post('/send_mail', 'MailController@SendMail');
+/* Route::post('auth/login', 'AuthController@login'); */

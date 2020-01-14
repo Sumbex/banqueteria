@@ -188,23 +188,29 @@
                             siguiente formulario, te llamaremos al momento de leer tu mensaje</p>
                     </div>
                 </div>
-                <form>
+                <form method="POST" action="/send_mail">
+                    {{csrf_field()}}
                     <div class="row mt-5">
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="form-group">
-                                <input type="text" name="Nombre" placeholder="Ingrese su nombre" class="form-control">
+                                <input type="text" name="contacto" placeholder="Ingrese su nombre" class="form-control">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" name="Correo" placeholder="Ingrese su correo" class="form-control">
+                                <input type="text" name="correo" placeholder="Ingrese su correo" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="telefono" placeholder="Ingrese su n° telefono" class="form-control">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <textarea name="" class="form-control" id="" cols="30" rows="10"
+                                <textarea name="mensaje" class="form-control" id="" cols="30" rows="10"
                                     placeholder="Ingrese su Mensaje"></textarea>
                             </div>
                             <button class="btn btn-golden btn-block mb-4">Enviar Mensaje</button>
