@@ -20,7 +20,7 @@ class MailController extends Controller
 
         Mail::to('personal@test.cl', 'Personal')
             ->send(new SendMessage($data));
-//test
-        return redirect('/')->with('success', 'Correo enviado correctamente.');
+
+        return redirect('/#contacto')->with('success', 'Correo enviado correctamente.');
     }
 }
