@@ -92,30 +92,6 @@
                 <div class="carousel-item">
                     <img src="img/header3.jpg" class="d-block w-100" alt="...">
                 </div>
-
-    </nav> <br>
-    @if (session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
-
-    <!-- CARRUSEL -->
-    <div id="carouselExampleIndicators" class="carousel slide mt-5" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="img/carrusel_02.jpg" alt="First slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="img/carrusel_01.jpg" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="img/carrusel_03.png" alt="Third slide">
             </div>
             <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -337,8 +313,8 @@
                                     <textarea class="form-control" name="mensaje" cols="30" rows="5"
                                         placeholder="Mensaje"></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-danger btn-block">Enviar
-                                    Mensaje</button>
+                                <button type="submit" class="btn btn-danger btn-block" 
+                                data-toggle="modal" data-target="#exampleModalCenter">Enviar Mensaje</button>
                             </form>
                         </div>
                     </div>
@@ -346,6 +322,47 @@
             </div>
         </div>
     </section>
+
+    @if (session('success'))
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                
+                <div class="modal-header modalContacto">
+                        <h3 class="modal-title" id="exampleModalLongTitle">{{ session('success') }}        
+                        </h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body text-center">
+                        <!-- {{ session('success') }} -->
+                        <h4 class="text-center">Recuerde visitar nuestras redes sociales.</h4>
+                        <div class="row justify-content-center">
+                            <div class="col-md-3">
+                                <a href="https://www.facebook.com/Academia-de-Peluquer%C3%ADa-LICIDAN-197924636960422/"
+                                    target="_blank">
+                                    <img class="mx-4 my-2" src="img/facebook.png" width="50px" height="50px"></a>
+                                    <small class="text-center"style="color: #ad5389;">Academia</small>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="https://www.facebook.com/licia.pacheco.98" 
+                                    target="_blank">
+                                    <img class="mx-4 my-2" src="img/facebook.png" width="50px" height="50px"></a>
+                                    <small class="text-center" style="color:#ad5389;">Peluqueria</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer modalContacto">
+                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal" 
+                    style="color:white; border: 2px solid #ad5389; ">Volver</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
 
     <!-- redes sociales -->
     <section id="redes">
@@ -463,6 +480,10 @@
             
 
         });
+
+        $('#exampleModalCenter').modal({
+            keyboard: false
+        })
 
     </script>
 
