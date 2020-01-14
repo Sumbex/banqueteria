@@ -1,0 +1,3 @@
+$('#exampleModalCenter').modal({
+    keyboard: false
+  })

@@ -30,6 +30,6 @@ class SendMessage extends Mailable
     public function build()
     {
         return $this->markdown('emails.sendMessage')
-            ->subject('Contacto de'.$this->data['contacto']);
+            ->subject('Contacto de '.$this->data['contacto']);
     }
 }

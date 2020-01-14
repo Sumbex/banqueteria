@@ -55,11 +55,6 @@
             </div>
         </div>
     </nav> <br>
-    @if (session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
 
     <!-- CARRUSEL -->
     <div id="carouselExampleIndicators" class="carousel slide mt-5" data-ride="carousel">
@@ -249,6 +244,25 @@
 
             </div>
         </div>
+        @if (session('success'))
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body text-center">
+                {{ session('success') }}
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+@endif
     </section>
 
     <!-- UBICACION -->
@@ -290,7 +304,7 @@
     <!-- BAGUETTEBOX JS -->
     <script type="text/javascript" src="js/baguetteBox.min.js"></script>
 
-
+<script type="text/javascript" src="js/test.js"></script>
     <!-- BAGUETTE BOX SCRIPT -->
     <script>
         baguetteBox.run('.galeria1');
