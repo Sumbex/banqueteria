@@ -55,6 +55,11 @@
             </div>
         </div>
     </nav> <br>
+    @if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
 
     <!-- CARRUSEL -->
     <div id="carouselExampleIndicators" class="carousel slide mt-5" data-ride="carousel">
