@@ -19,21 +19,21 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navbarNav">
     <section id="inicio"></section>
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg bg-light fixed-top">
-        <div class="container">
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="img/banq-logo2.png" width="80px" height="80px">
+                <img src="img/banq-logo3.png" width="80px" height="50px">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span><img src="img/menu.png" height="32px" width="32px"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item active">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
                         <a class="nav-link fromLeft" href="#inicio">Inicio</a>
                     </li>
                     <li class="nav-item">
@@ -54,10 +54,10 @@
                 </ul>
             </div>
         </div>
-    </nav> <br>
+    </nav>
 
     <!-- CARRUSEL -->
-    <div id="carouselExampleIndicators" class="carousel slide mt-5" data-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -86,13 +86,13 @@
 
     <!-- INFO ONE -->
     <section id="who">
-        <div class="container my-5">
+        <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h1 class="info-one-h1">¿Quienes Somos?</h1>
+                    <h1 class="info-one-h1">Sobre Nosotros</h1>
                 </div>
             </div>
-            <div class="row mt-5">
+            <div class="row">
                 <div class="col-md-12">
                     <p class="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis sint
                         laboriosam sed, blanditiis tenetur sapiente aliquam impedit? Magnam deleniti esse quod vitae,
@@ -110,16 +110,16 @@
 
     <!-- INFO TWO -->
     <section id="servicios">
-        <div class="parallax ">
+        <div class="parallax">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12 text-center mt-5">
-                        <h1 class="info-one-h1">Nuestros Servicios</h1>
+                    <div class="col-md-12 text-center">
+                        <h1 class="info-one-h2 my-5">Nuestros Servicios</h1>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12 my-5">
-                        <p class="text-center text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    <div class="col-md-12">
+                        <p class="text-center text-white my-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                             Debitis sint laboriosam sed, blanditiis tenetur sapiente aliquam impedit? Magnam deleniti
                             esse quod vitae, repellendus voluptates corrupti expedita pariatur! Hic nulla reiciendis,
                             omnis autem qui voluptates harum consequatur facilis blanditiis aperiam odit aut numquam
@@ -135,8 +135,8 @@
     </section>
 
     <!-- GALERIA -->
-    <section id="galeria">
-        <div class="container my-5">
+    <section id="galeria" class="mt-4">
+        <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
                     <h1 class="info-one-h1">Galeria</h1>
@@ -144,25 +144,25 @@
             </div>
             <div class="galeria1">
                 <div class="row text-center">
-                    <div class="col-md-3 img-hover-zoom mt-5">
+                    <div class="col-md-3 img-hover-zoom my-5">
                         <!-- <p class="p-header">Placeholder Text</p> -->
                         <a href="img/gal.jpg">
                             <img src="img/gal.jpg" height="300px" width="200px">
                         </a>
                     </div>
-                    <div class="col-md-3 img-hover-zoom mt-5">
+                    <div class="col-md-3 img-hover-zoom my-5">
                         <!-- <p class="p-header">Placeholder Text</p> -->
                         <a href="img/gal-2.jpg">
                             <img src="img/gal-2.jpg" height="300px" width="200px">
                         </a>
                     </div>
-                    <div class="col-md-3 img-hover-zoom mt-5">
+                    <div class="col-md-3 img-hover-zoom my-5">
                         <!-- <p class="p-header">Placeholder Text</p> -->
                         <a href="img/gal-3.jpg">
                             <img src="img/gal-3.jpg" height="300px" width="200px">
                         </a>
                     </div>
-                    <div class="col-md-3 img-hover-zoom mt-5">
+                    <div class="col-md-3 img-hover-zoom my-5">
                         <!-- <p class="p-header">Placeholder Text</p class="p-header"> -->
                         <a href="img/gal-4.jpg">
                             <img src="img/gal-4.jpg" height="300px" width="200px">
@@ -179,7 +179,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center mt-5">
-                        <h1 class="info-one-h1">Contacto</h1>
+                        <h1 class="info-one-h2">Contacto</h1>
                     </div>
                 </div>
                 <div class="row">
@@ -207,7 +207,7 @@
                                 <textarea name="" class="form-control" id="" cols="30" rows="10"
                                     placeholder="Ingrese su Mensaje"></textarea>
                             </div>
-                            <button class="btn btn-golden btn-block mb-4">Enviar Mensaje</button>
+                            <button class="btn btn-golden btn-block mb-4 text-white"><b>Enviar Mensaje</b></button>
                         </div>
                     </div>
                 </form>
@@ -215,7 +215,7 @@
 
                 <div class="row">
                     <div class="col-md-12 text-center mt-5">
-                        <h1 class="info-one-h1">Redes Sociales</h1>
+                        <h1 class="info-one-h2">Redes Sociales</h1>
                     </div>
                 </div>
 
