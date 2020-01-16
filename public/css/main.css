@@ -183,4 +183,7 @@ section:before {
 }
 #galeria{
   color: black;
+
+[data-toggle="modal"] #exampleModalCenter {
+
 }
