@@ -21,6 +21,6 @@ class MailController extends Controller
         Mail::to('personal@test.cl', 'Personal')
             ->send(new SendMessage($data));
 
-        return redirect('/')->with('success', 'Correo enviado correctamente.');
+            return response()->json(['success'=>'Got Simple Ajax Request.']);
     }
 }
