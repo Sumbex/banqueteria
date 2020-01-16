@@ -2,332 +2,361 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Banqueteria NeoFox</title>
-    <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <!-- BOOTSTRAP CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- BAGUETTEBOX -->
-    <link rel="stylesheet" type="text/css" href="css/baguetteBox.min.css">
-    <!-- SCROLL REVEAL -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="css/main.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NeoFox Informática</title>
+    <meta name="description"
+    content="Desarrollo de sistemas informaticos y diseño web. NeoFox Informaticos del Bio-Bio" />
+    <link rel="icon" type="image/x-icon" href="img/neofox-ico.ico">
+	<link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/fixed.css">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
 </head>
 
-<body data-spy="scroll" data-target="#navbarNav">
-    <section id="inicio"></section>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="img/banq-logo3.png" width="80px" height="50px">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span><img src="img/menu.png" height="32px" width="32px"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link fromLeft" href="#inicio">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fromLeft" href="#who">Sobre Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fromLeft" href="#servicios">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fromLeft" href="#galeria">Galeria</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fromLeft" href="#contacto">Contacto</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fromLeft" href="#ubicacion">Ubicación</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<body data-spy="scroll" data-target="#navbarResponsive">
 
-    <!-- CARRUSEL -->
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="img/carrusel_02.jpg" alt="First slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="img/carrusel_01.jpg" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="img/carrusel_03.png" alt="Third slide">
-            </div>
+	<!-- INICIO DE LA BIENVENIDA WEB -->
+	<div id="home">
+
+		<!-- INICO NAVBAR -->
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+			<a class="navbar-brand" href="#"><img src="img/neofox-nav.png" alt="navbar-logo">Neofox</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#home">Inicio</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#info-one">Sobre Nosotros</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#info-two">Servicios</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#info-three">Nuestros Clientes</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#info-four">Contacto</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!-- FIN NAVBAR -->
+
+		<!-- INICIO SECCION LANDING -->
+		<div class="landing">
+			<div class="home-wrap">
+				<div class="home-inner">
+
+				</div>
+			</div>
+		</div>
+
+		<div class="caption text-center">
+			<h1>Sistemas informaticos</h1>
+			<h3>Diseños web y Sistemas Administrativos</h3>
+			<a class="btn btn-outline-light btn-lg" href="#info-four">Conocer Más</a>
+		</div>
+		<!-- FIN SECCION LANDING -->
+
+	</div>
+	<!-- FIN DE LA BIENVENIDA WEB -->
+
+	<!-- INICIO DE LA INFO ONE-->
+	<div id="info-one" class="offset">
+
+		<div class="col-12 narrow text-center">
+			<h1>Sobre Nosotros</h1>
+			<p class="lead">Somos una empresa enfocada a dar soluciones a todo tipo de problemas informaticos, damos conocer su
+				empresa/negocio a internet y tambien a dar soluciones administrativas con nuestros sistemas informaticos.
+				Contamos con más de 5 años de experiencia en el desarrollo informatico</p>
+			<!-- <a class="btn btn-secondary btn-md" href="http://www.google.cl" target="_blank">Placeholder Button</a> -->
+		</div>
+
+	</div>
+	<!-- FIN DE LA INFO ONE -->
+
+	<!-- INICIO DE LA INFO TWO-->
+	<div id="info-two" class="offset">
+
+		<!-- INICIO DEL JUMBOTRON -->
+		<div class="jumbotron">
+			<div class="narrow text-center">
+				<div class="col-12">
+					<h3 class="heading">Servicios</h3>
+					<div class="heading-underline"></div>
+				</div>
+
+				<div class="row text-center">
+					<div class="col-md-4">
+						<div class="feature">
+							<i class="fas fa-globe fa-4x" data-fa-transform="shrink-3 up-5"></i>
+							<h3>Desarrollo Web</h3>
+							<p>Si necesita un sitio de presentación web para dar a conocer su empresa y principalmente
+								sus servicios a ofrecer, contamos con una gran variedad de diseños personalizados que
+								iremos desarrollando junto a usted.</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="feature">
+							<i class="fas fa-laptop-code fa-4x" data-fa-transform="shrink-3 up-5"></i>
+							<h3>Desarrollo de Sistemas</h3>
+							<p>Si desea un sistema para administrar su empresa o su negocio, le ofrecemos la oportunidad
+								de desarrollar junto a nosotros una plataforma en la cual se sienta comodo al momento de
+								trabajar.</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="feature">
+							<i class="fas fa-comments-dollar fa-4x" data-fa-transform="shrink-3 up-5"></i>
+							<h3>Asesorias</h3>
+							<p>Le otorgamos la facilidad de contactar con nosotros para resolver dudas referente a
+								inversiones y manejo de herramientas informaticas.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- FIN DEL JUMBOTRON -->
+	</div>
+	<!-- FIN DE LA INFO TWO -->
+
+	<!-- INICIO DE LA INFO THREE-->
+	<div id="info-three" class="offset">
+		<div class="fixed-background">
+			<div class="row dark text-center">
+				<div class="col-12">
+					<h3 class="heading">Clientes</h3>
+					<div class="heading-underline"></div>
+				</div>
+
+				<div class="col-md-4">
+					<h3>Sindicato CMPC Santa Fe</h3>
+					<div class="feature">
+						<a href="http://www.sindicatoptastafe.cl/" target="_blank"><i class="fas fa-code fa-3x"></i></a>
+					</div>
+					<p class="lead">Sistema de Administración</p>
+				</div>
+
+				<div class="col-md-4">
+					<h3>Peluqueria Licidan</h3>
+					<div class="feature">
+						<a href="http://licidan.neofox.cl/" target="_blank"><i class="fas fa-code fa-3x"></i></a>
+					</div>
+					<p class="lead">Pagina de Presentación</p>
+				</div>
+
+				<div class="col-md-4">
+					<h3>Delicias Pellü</h3>
+					<div class="feature">
+						<a href="http://banq.neofox.cl/" target="_blank"><i class="fas fa-code fa-3x"></i></a>
+					</div>
+					<p class="lead">Pagina de Presentación</p>
+				</div>
+
+			</div>
+			<div class="fixed-wrap">
+				<div class="fixed">
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- FIN DE LA INFO THREE -->
+
+
+	<!-- INICIO DE LA INFO FOUR -->
+	<div id="info-four" class="offset">
+		<div class="jumbotron">
+			<div class="col-12 text-center">
+				<h3 class="heading">Contacto</h3>
+				<div class="heading-underline"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6 clients">
+                    <form>
+						<div class="row text-center">
+							<div class="col-md-12">
+								<h3>Enviar Mensaje</h3>
+								<p>Si desea contactar con nosotros puede escribirnos un mensaje y le responderemos a la
+									brevedad</p>
+								<div class="form-group">
+									<input name="contacto" type="text" class="form-control"
+										placeholder="Ingrese su nombre" minlength="2" maxlength="50">
+								</div>
+								<div class="form-group">
+									<input name="telefono" type="text" class="form-control"
+										placeholder="Ingrese su numero de telefono" minlength="5" maxlength="15">
+								</div>
+								<div class="form-group">
+									<input name="correo" type="email" class="form-control"
+										placeholder="Ingrese su correo (Opcional)" minlength="4" maxlength="50">
+								</div>
+								<div class="form-group">
+									<textarea id="text-area" name="mensaje" class="form-control" cols="30" rows="5"
+										placeholder="Ingrese su mensaje" minlength="5" maxlength="100"></textarea>
+                                </div>
+                                <button class="btn btn-secondary btn-block text-white btn-send">Enviar</button>
+                                <button type="reset" hidden id="resetForm"></button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-6 clients">
+					<div class="row text-center">
+						<div class="col-md-12">
+							<h3>Redes Sociales</h3>
+							<p>Puede ver más de nuestros trabajos o escribirnos desde nuestras redes sociales</p>
+							<div class="row img-soc">
+								<div class="col-md-6">
+									<a href="https://www.facebook.com/NeoFoxInformatica" target="_blank"><img
+											src="img/fb-icon.png">
+									<h3>Facebook</h3>
+								</a>
+								</div>
+								<div class="col-md-6">
+									<a href="https://www.instagram.com/neofoxinformatica" target="_blank"><img
+											src="img/ins-icon.png">
+									<h3>Instagram</h3>
+								</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- <div class="col-12 narrow text-center">
+			<p class="lead"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui assumenda accusamus voluptatum
+				expedita ipsum architecto corrupti. A maxime nam dicta.</p>
+			<a class="btn btn-secondary btn-md" href="http://www.google.cl" target="_blank">Placeholder</a>
+		</div> -->
+
+	</div>
+	<!-- FIN DE LA INFO FOUR -->
+
+	<!-- INICIO DE CONTACTO-->
+	<div id="contacto" class="offset">
+		<footer>
+			<div class="row justify-content-center">
+				<div class="col-md-5 text-center">
+					<img src="img/neofox-nav.png">
+					<p>NeoFox Informatica Ltda Todos los Derechos Reservados.</p>
+					<strong>Información de Contacto</strong>
+					<p>+569 2038 7028<br>neofox.informatica@gmail.com</p>
+					<a href="https://www.facebook.com/NeoFoxInformatica" target="_blank"><i class="fab fa-facebook-square"></i></a>
+					<a href="https://www.instagram.com/neofoxinformatica" target="_blank"><i class="fab fa-instagram"></i></a>
+				</div>
+				<hr class="socket">
+				&copy; NeoFox Ltda. 2020
+			</div>
+		</footer>
+	</div>
+    <!-- FIN DE CONTACTO -->
+    
+
+    {{-- MODAL --}}
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" id="modal-success" data-toggle="modal" data-target="#exampleModal" hidden>
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Mensaje Enviado Correctamente</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+        <div class="modal-body text-center">
+          <h3>Nos pondremos en contacto con usted lo antes posible</h3>
+        </div>
+        <div class="modal-footer mx-auto">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">¡Ok!</button>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <!-- INFO ONE -->
-    <section id="who">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h1 class="info-one-h1">Sobre Nosotros</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis sint
-                        laboriosam sed, blanditiis tenetur sapiente aliquam impedit? Magnam deleniti esse quod vitae,
-                        repellendus voluptates corrupti expedita pariatur! Hic nulla reiciendis, omnis autem qui
-                        voluptates harum consequatur facilis blanditiis aperiam odit aut numquam deleniti quia suscipit,
-                        iusto quam mollitia? Vitae a velit sequi soluta ipsa pariatur, iure porro ut rem voluptas
-                        eligendi dolorem repellendus expedita consequuntur impedit alias excepturi nostrum? Incidunt
-                        ullam ad qui modi libero explicabo velit quae! Error reiciendis eligendi sed quibusdam
-                        necessitatibus quos ut ab, perspiciatis veniam nobis placeat quia accusantium, iusto obcaecati
-                        tempora. Nulla quo quae impedit!</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- INFO TWO -->
-    <section id="servicios">
-        <div class="parallax">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h1 class="info-one-h2 my-5">Nuestros Servicios</h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <p class="text-center text-white my-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                            Debitis sint laboriosam sed, blanditiis tenetur sapiente aliquam impedit? Magnam deleniti
-                            esse quod vitae, repellendus voluptates corrupti expedita pariatur! Hic nulla reiciendis,
-                            omnis autem qui voluptates harum consequatur facilis blanditiis aperiam odit aut numquam
-                            deleniti quia suscipit, iusto quam mollitia? Vitae a velit sequi soluta ipsa pariatur, iure
-                            porro ut rem voluptas eligendi dolorem repellendus expedita consequuntur impedit alias
-                            excepturi nostrum? Incidunt ullam ad qui modi libero explicabo velit quae! Error reiciendis
-                            eligendi sed quibusdam necessitatibus quos ut ab, perspiciatis veniam nobis placeat quia
-                            accusantium, iusto obcaecati tempora. Nulla quo quae impedit!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- GALERIA -->
-    <section id="galeria" class="mt-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h1 class="info-one-h1">Galeria</h1>
-                </div>
-            </div>
-            <div class="galeria1">
-                <div class="row text-center">
-                    <div class="col-md-3 img-hover-zoom my-5">
-                        <!-- <p class="p-header">Placeholder Text</p> -->
-                        <a href="img/gal.jpg">
-                            <img src="img/gal.jpg" height="300px" width="200px">
-                        </a>
-                    </div>
-                    <div class="col-md-3 img-hover-zoom my-5">
-                        <!-- <p class="p-header">Placeholder Text</p> -->
-                        <a href="img/gal-2.jpg">
-                            <img src="img/gal-2.jpg" height="300px" width="200px">
-                        </a>
-                    </div>
-                    <div class="col-md-3 img-hover-zoom my-5">
-                        <!-- <p class="p-header">Placeholder Text</p> -->
-                        <a href="img/gal-3.jpg">
-                            <img src="img/gal-3.jpg" height="300px" width="200px">
-                        </a>
-                    </div>
-                    <div class="col-md-3 img-hover-zoom my-5">
-                        <!-- <p class="p-header">Placeholder Text</p class="p-header"> -->
-                        <a href="img/gal-4.jpg">
-                            <img src="img/gal-4.jpg" height="300px" width="200px">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACTO -->
-    <section id="contacto">
-        <div class="parallax-2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center mt-5">
-                        <h1 class="info-one-h2">Contacto</h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 mt-5">
-                        <p class="text-center text-white h4">Si deseas reservar o escribirnos puedes hacerlo desde el
-                            siguiente formulario, te llamaremos al momento de leer tu mensaje</p>
-                    </div>
-                </div>
-                <form>
-                    <div class="row mt-5">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" name="Nombre" placeholder="Ingrese su nombre" class="form-control">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" name="Correo" placeholder="Ingrese su correo" class="form-control">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <textarea name="" class="form-control" id="" cols="30" rows="10"
-                                    placeholder="Ingrese su Mensaje"></textarea>
-                            </div>
-                            <button class="btn btn-golden btn-block mb-4 text-white"><b>Enviar Mensaje</b></button>
-                        </div>
-                    </div>
-                </form>
-
-
-                <div class="row">
-                    <div class="col-md-12 text-center mt-5">
-                        <h1 class="info-one-h2">Redes Sociales</h1>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-12 my-3">
-                        <p class="text-center text-white h4">Visita nuestras redes sociales</p>
-                    </div>
-                </div>
-
-                <div class="row justify-content-center">
-                    <div class="col-md-2">
-                        <a href="https://www.facebook.com/deliciaspellu/" target="_blank">
-                            <img class="mx-4" src="img/facebook.png" width="80px" height="80px"></a>
-                    </div>
-                    <div class="col-md-2">
-                        <a href="https://www.instagram.com/delicias.pellu/" target="_blank">
-                            <img class="mx-4" src="img/instagram.png" width="80px" height="80px"></a>
-                    </div>
-                </div> <br>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- UBICACION -->
-    <section id="ubicacion">
-        <div class="container my-5">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 class="info-one-h1 text-center">Nuestra Ubicación</h2 c>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.78354145113!2d-72.3336110624011!3d-37.48943408746484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x966bc2a7bdfa5adb%3A0x232460335437c4e7!2zUsOtbyBZYXF1aSwgTG9zIMOBbmdlbGVzLCBCw61vIELDrW8!5e0!3m2!1ses!2scl!4v1578938312978!5m2!1ses!2scl"
-                        width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="page-footer font-small blue mt-3">
-
-        <!-- Copyright -->
-        <div class="footer-copyright text-center text-white py-3">Copyright © 2019-2020
-            <a href="https://neofox.cl" target="_blank" style="text-decoration:none"> Neofox.cl
-                <img class="mx-auto" src="img/fox-head.png" width="40px" height="40px"></a>
-        </div>
-        <!-- Copyright -->
-
-    </footer>
-    <!-- Footer -->
-    <!-- BOOTSTRAP SCRIPTS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <!-- BAGUETTEBOX JS -->
-    <script type="text/javascript" src="js/baguetteBox.min.js"></script>
-
-
-    <!-- BAGUETTE BOX SCRIPT -->
-    <script>
-        baguetteBox.run('.galeria1');
-    </script>
-
-    <!-- SCROLL REVEAL SCRIPTS -->
-    <script>
-        window.sr = ScrollReveal();
-        sr.reveal('.navbaar', {
-            duration: 2000,
-            origin: 'bottom'
-        });
-        sr.reveal('.header-content-left', {
-            duration: 2000,
-            origin: 'top',
-            distance: '300px'
-        });
-        sr.reveal('.header-content-right', {
-            duration: 2000,
-            origin: 'bottom',
-            distance: '300px'
-        });
-        sr.reveal('#testimonios', {
-            duration: 2000,
-            origin: 'right',
-            distance: '300px'
-        });
-        sr.reveal('.info-one-left', {
-            duration: 2000,
-            origin: 'left',
-            distance: '300px'
-        });
-        sr.reveal('.info-one-right', {
-            duration: 2000,
-            origin: 'right',
-            distance: '300px'
-        });
-        sr.reveal('#info-two', {
-            duration: 2000,
-            origin: 'right',
-        });
-        sr.reveal('#contact', {
-            duration: 2000,
-            distance: '300px',
-            origin: 'right',
-        });
-    </script>
+	<!--- Script Source Files -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+	<!--- End of Script Source Files -->
 
 </body>
+
+<script type="text/javascript">
+
+$.ajaxSetup({
+
+headers: {
+
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+
+}
+
+});
+   
+
+    $(".btn-send").click(function(e){
+
+  
+
+        e.preventDefault();
+
+   
+
+        var contacto = $("input[name=contacto]").val();
+        if(contacto == ''){
+            return alert("Debe de ingresar un nombre");
+        }
+
+        var correo = $("input[name=correo]").val();
+
+        var telefono = $("input[name=telefono]").val();
+        if(telefono == ''){
+            return alert("Debe de ingresar su numero");
+        }
+
+        var mensaje = $("input[name=mensaje]").val();
+        if(mensaje == ''){
+            return alert("Debe de ingresar un mensaje");
+        }
+
+   
+
+        $.ajax({
+
+           type:'POST',
+
+           url:'/send_mail',
+
+           data:{contacto:contacto, correo:correo, telefono:telefono, mensaje:mensaje},
+
+           success:function(data){
+
+              $("#resetForm").click();
+              $("#modal-success").click();
+
+           }
+
+        });
+
+  
+
+	});
+
+</script>
 
 </html>
