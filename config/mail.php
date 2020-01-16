@@ -60,6 +60,11 @@ return [
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
+    'to' => [         
+         'address' => env('MAIL_TO_ADDRESS', 'neofox.informatica@gmail.com'),
+         'name' => env('MAIL_TO_NAME', 'Neofox'),     
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | E-Mail Encryption Protocol
