@@ -56,7 +56,7 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'contacto@test.cl'),
+        'address' => env('MAIL_FROM_ADDRESS', 'contacto.neofox@gmail.com'),
         'name' => env('MAIL_FROM_NAME', 'Contacto Admin'),
     ],
 

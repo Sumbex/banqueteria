@@ -18,9 +18,9 @@ class MailController extends Controller
             'mensaje' => $request->mensaje
         ]);
 
-        Mail::to('personal@test.cl', 'Personal')
+        Mail::to('neofox.informatica@gmail.com', 'Neofox Informatica')
             ->send(new SendMessage($data));
 
-        return redirect('/')->with('success', '¡Correo enviado exitosamente!');
+        return['success', '¡Correo enviado exitosamente!'];
     }
 }
