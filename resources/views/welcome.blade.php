@@ -13,8 +13,6 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- BAGUETTEBOX -->
     <link rel="stylesheet" type="text/css" href="css/baguetteBox.min.css">
-    <!-- SCROLL REVEAL -->
-    <script src="https://unpkg.com/scrollreveal"></script>
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -225,14 +223,14 @@
                     </div>
                 </div>
 
-                <div class="row justify-content-center">
-                    <div class="col-md-2">
+                <div class="row justify-contenet-center text-center">
+                    <div class="col-6 col-md-6">
                         <a href="https://www.facebook.com/deliciaspellu/" target="_blank">
-                            <img class="mx-4" src="img/facebook.png" width="80px" height="80px"></a>
+                            <img class="mx-auto" src="img/facebook.png" width="80px" height="80px"></a>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-6 col-md-6">
                         <a href="https://www.instagram.com/delicias.pellu/" target="_blank">
-                            <img class="mx-4" src="img/instagram.png" width="80px" height="80px"></a>
+                            <img class="mx-auto" src="img/instagram.png" width="80px" height="80px"></a>
                     </div>
                 </div> <br>
 
@@ -283,49 +281,6 @@
     <!-- BAGUETTE BOX SCRIPT -->
     <script>
         baguetteBox.run('.galeria1');
-    </script>
-
-    <!-- SCROLL REVEAL SCRIPTS -->
-    <script>
-        window.sr = ScrollReveal();
-        sr.reveal('.navbaar', {
-            duration: 2000,
-            origin: 'bottom'
-        });
-        sr.reveal('.header-content-left', {
-            duration: 2000,
-            origin: 'top',
-            distance: '300px'
-        });
-        sr.reveal('.header-content-right', {
-            duration: 2000,
-            origin: 'bottom',
-            distance: '300px'
-        });
-        sr.reveal('#testimonios', {
-            duration: 2000,
-            origin: 'right',
-            distance: '300px'
-        });
-        sr.reveal('.info-one-left', {
-            duration: 2000,
-            origin: 'left',
-            distance: '300px'
-        });
-        sr.reveal('.info-one-right', {
-            duration: 2000,
-            origin: 'right',
-            distance: '300px'
-        });
-        sr.reveal('#info-two', {
-            duration: 2000,
-            origin: 'right',
-        });
-        sr.reveal('#contact', {
-            duration: 2000,
-            distance: '300px',
-            origin: 'right',
-        });
     </script>
 
 </body>
