@@ -21,6 +21,6 @@ class MailController extends Controller
         Mail::to('personal@test.cl', 'Personal')
             ->send(new SendMessage($data));
 
-            return response()->json(['success'=>'Got Simple Ajax Request.']);
+            return response()->json(['success'=>'Mensaje enviado correctamente, hola soy yo la mas facil, mejor fuera que dentro']);
     }
 }

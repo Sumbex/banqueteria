@@ -10,7 +10,9 @@
     <link rel="icon" type="image/x-icon" href="img/neofox-ico.ico">
 	<link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/fixed.css">
+	<link rel="stylesheet" href="css/fixed.css">
+	<link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.css">
+	<link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 </head>
@@ -135,7 +137,9 @@
 					<div class="heading-underline"></div>
 				</div>
 
-				<div class="col-md-4">
+				<div class="owl-carousel owl-theme">
+
+				<div class="item">
 					<h3>Sindicato CMPC Santa Fe</h3>
 					<div class="feature">
 						<a href="http://www.sindicatoptastafe.cl/" target="_blank"><i class="fas fa-code fa-3x"></i></a>
@@ -143,7 +147,7 @@
 					<p class="lead">Sistema de Administración</p>
 				</div>
 
-				<div class="col-md-4">
+				<div class="item">
 					<h3>Peluqueria Licidan</h3>
 					<div class="feature">
 						<a href="http://licidan.neofox.cl/" target="_blank"><i class="fas fa-code fa-3x"></i></a>
@@ -151,13 +155,23 @@
 					<p class="lead">Pagina de Presentación</p>
 				</div>
 
-				<div class="col-md-4">
+				<div class="item">
 					<h3>Delicias Pellü</h3>
 					<div class="feature">
 						<a href="http://banq.neofox.cl/" target="_blank"><i class="fas fa-code fa-3x"></i></a>
 					</div>
 					<p class="lead">Pagina de Presentación</p>
 				</div>
+
+				<div class="item">
+					<h3>RyS Contabilidad</h3>
+					<div class="feature">
+						<a href="http://banq.neofox.cl/" target="_blank"><i class="fas fa-code fa-3x"></i></a>
+					</div>
+					<p class="lead">Pagina de Presentación</p>
+				</div>
+
+			</div>
 
 			</div>
 			<div class="fixed-wrap">
@@ -200,7 +214,7 @@
 								</div>
 								<div class="form-group">
 									<textarea id="text-area" name="mensaje" class="form-control" cols="30" rows="5"
-										placeholder="Ingrese su mensaje" minlength="5" maxlength="100"></textarea>
+										placeholder="Ingrese su mensaje"  minlength="4" maxlength="100"></textarea>
                                 </div>
                                 <button class="btn btn-secondary btn-block text-white btn-send">Enviar</button>
                                 <button type="reset" hidden id="resetForm"></button>
@@ -293,10 +307,48 @@
 	<script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
 	<!--- End of Script Source Files -->
+	{{-- OWLCAROUSEL --}}
+<script src="OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js" type="text/javascript"></script>
+<script src="OwlCarousel2-2.3.4/dist/owl.carousel.js" type="text/javascript"></script>
+{{-- OWLCAROUSEL --}}
+
 
 </body>
 
 <script type="text/javascript">
+
+var owl = $('.owl-carousel');
+owl.owlCarousel({
+    loop:true,
+    margin:10,
+	autoplay:true,
+    autoplayTimeout:4000,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },            
+        1000:{
+            items:3
+        }
+    }
+});
+owl.on('mousewheel', '.owl-stage', function (e) {
+    if (e.deltaY>0) {
+        owl.trigger('next.owl');
+    } else {
+        owl.trigger('prev.owl');
+    }
+    e.preventDefault();
+});
+
+function validar_email( email ) 
+        {
+            var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            return regex.test(email) ? true : false;
+        }
 
 $.ajaxSetup({
 
@@ -323,13 +375,21 @@ headers: {
         }
 
         var correo = $("input[name=correo]").val();
+                    if(correo == ''){
+                        return alert("Debe de ingresar un correo");
+                    }
+                    else if(validar_email(correo)){
+                        var correo = $("input[name=correo]").val();
+                    }else{
+                        return alert("Formato de correo incorrecto");
+                    }
 
         var telefono = $("input[name=telefono]").val();
         if(telefono == ''){
             return alert("Debe de ingresar su numero");
         }
 
-        var mensaje = $("input[name=mensaje]").val();
+        var mensaje = $("textarea[name=mensaje]").val();
         if(mensaje == ''){
             return alert("Debe de ingresar un mensaje");
         }
