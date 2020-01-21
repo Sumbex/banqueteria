@@ -2,19 +2,26 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Banqueteria NeoFox</title>
-    <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <!-- BOOTSTRAP CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- BAGUETTEBOX -->
-    <link rel="stylesheet" type="text/css" href="css/baguetteBox.min.css">
-    <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="css/main.css">
+<title>Licidan</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- carousel galeria -->
+        <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.css">
+	    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+        <!-- FORMULARIO AJAX -->
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <!-- GOOGLE FONTS -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <!-- BOOTSTRAP CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- BAGUETTEBOX -->
+        <link rel="stylesheet" type="text/css" href="css/baguetteBox.min.css">
+        <!-- CUSTOM CSS -->
+        <link rel="stylesheet" href="css/main.css?version=0.3">
+        <link rel="stylesheet" href="css/animate.css">
+
 </head>
 
 <body data-spy="scroll" data-target="#navbarNav">
@@ -132,42 +139,161 @@
         </div>
     </section>
 
-    <!-- GALERIA -->
-    <section id="galeria" class="mt-4">
+   <!-- GALERIA -->
+    <section id="galeria">
         <div class="container">
+            
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h1 class="info-one-h1">Galeria</h1>
+                    <h1 class="info-one-h1 quienesBorder mt-4">Galeria
+                    </h1>
                 </div>
             </div>
-            <div class="galeria1">
-                <div class="row text-center">
-                    <div class="col-md-3 img-hover-zoom my-5">
-                        <!-- <p class="p-header">Placeholder Text</p> -->
-                        <a href="img/gal.jpg">
-                            <img src="img/gal.jpg" height="300px" width="200px">
-                        </a>
+
+            <div class="row text-center">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="galeria1 col-md-12">
+
+                            <div class="img-hover-zoom my-5">
+                                <a href="img/gal.jpg" style="text-decoration:none;color: black;">
+                                    <p class="p-header tituloGaleria">GALERIA 1</p>
+                                    <img src="img/gal.jpg" height="100%" width="100%">
+                                </a>
+                            </div>
+
+                            <div class="img-hover-zoom my-5 d-none">
+                                <a href="img/gal-2.jpg" style="text-decoration:none;color: white;">
+                                </a>
+                            </div>
+
+                            <div class="img-hover-zoom my-5 d-none">
+                                <a href="img/gal-3.jpg" style="text-decoration:none;color: white;">
+                                </a>
+                            </div>
+
+                            <div class="img-hover-zoom my-5 d-none">
+                                <a href="img/gal-4.jpg" style="text-decoration:none;color: white;">
+                                </a>
+                            </div>
+
+                        </div>
                     </div>
-                    <div class="col-md-3 img-hover-zoom my-5">
-                        <!-- <p class="p-header">Placeholder Text</p> -->
-                        <a href="img/gal-2.jpg">
-                            <img src="img/gal-2.jpg" height="300px" width="200px">
-                        </a>
+
+                    <div class="item">
+                        <div class="galeria2 col-md-12">
+
+                            <div class="img-hover-zoom my-5">
+                                <a href="img/gal-2.jpg" style="text-decoration:none;color: white;">
+                                    <p class="p-header tituloGaleria">GALERIA 2</p>
+                                    <img src="img/gal-2.jpg" height="100%" width="100%">
+                                </a>
+                            </div>
+
+                            <div class="img-hover-zoom my-5 d-none">
+                                <a href="img/gal.jpg" style="text-decoration:none;color: white;">
+                                </a>
+                            </div>
+
+                            <div class="img-hover-zoom my-5 d-none">
+                                <a href="img/gal-3.jpg" style="text-decoration:none;color: white;">
+                                </a>
+                            </div>
+
+                            <div class="img-hover-zoom my-5 d-none">
+                                <a href="img/gal-4.jpg" style="text-decoration:none;color: white;">
+                                </a>
+                            </div>
+
+                        </div>
                     </div>
-                    <div class="col-md-3 img-hover-zoom my-5">
-                        <!-- <p class="p-header">Placeholder Text</p> -->
-                        <a href="img/gal-3.jpg">
-                            <img src="img/gal-3.jpg" height="300px" width="200px">
-                        </a>
+                    <div class="item">
+                        <div class="galeria3 col-md-12">
+
+                            <div class="img-hover-zoom my-5">
+                                <a href="img/gal-3.jpg" style="text-decoration:none;color: white;">
+                                    <p class="p-header tituloGaleria">GALERIA 3</p>
+                                    <img src="img/gal-3.jpg" height="100%" width="100%">
+                                </a>
+                            </div>
+
+                            <div class="img-hover-zoom my-5 d-none">
+                                <a href="img/gal-2.jpg" style="text-decoration:none;color: white;">
+                                </a>
+                            </div>
+
+                            <div class="img-hover-zoom my-5 d-none">
+                                <a href="img/gal.jpg" style="text-decoration:none;color: white;">
+                                </a>
+                            </div>
+
+                            <div class="img-hover-zoom my-5 d-none">
+                                <a href="img/gal-4.jpg" style="text-decoration:none;color: white;">
+                                </a>
+                            </div>
+
+                        </div>
                     </div>
-                    <div class="col-md-3 img-hover-zoom my-5">
-                        <!-- <p class="p-header">Placeholder Text</p class="p-header"> -->
-                        <a href="img/gal-4.jpg">
-                            <img src="img/gal-4.jpg" height="300px" width="200px">
-                        </a>
+
+                    <div class="item">
+                        <div class="galeria4 col-md-12">
+
+                            <div class="img-hover-zoom my-5">
+                                <a href="img/gal-4.jpg" style="text-decoration:none;color: black;">
+                                    <p class="p-header tituloGaleria">GALERIA 4</p>
+                                    <img src="img/gal-4.jpg" height="100%" width="100%">
+                                </a>
+                            </div>
+
+                            <div class="img-hover-zoom my-5 d-none">
+                                <a href="img/gal-2.jpg" style="text-decoration:none;color: white;">
+                                </a>
+                            </div>
+
+                            <div class="img-hover-zoom my-5 d-none">
+                                <a href="img/gal-3.jpg" style="text-decoration:none;color: white;">
+                                </a>
+                            </div>
+
+                            <div class="img-hover-zoom my-5 d-none">
+                                <a href="img/gal.jpg" style="text-decoration:none;color: white;">
+                                </a>
+                            </div>
+
+                        </div>
                     </div>
+                    
+                    <div class="item">
+                        <div class="galeria5 col-md-12">
+
+                            <div class="img-hover-zoom my-5">
+                                <a href="img/gal.jpg" style="text-decoration:none;color: black;">
+                                    <p class="p-header tituloGaleria">GALERIA 5</p>
+                                    <img src="img/gal.jpg" height="100%" width="100%">
+                                </a>
+                            </div>
+
+                            <div class="img-hover-zoom my-5 d-none">
+                                <a href="img/gal-2.jpg" style="text-decoration:none;color: white;">
+                                </a>
+                            </div>
+
+                            <div class="img-hover-zoom my-5 d-none">
+                                <a href="img/gal-3.jpg" style="text-decoration:none;color: white;">
+                                </a>
+                            </div>
+
+                            <div class="img-hover-zoom my-5 d-none">
+                                <a href="img/gal-4.jpg" style="text-decoration:none;color: white;">
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -264,24 +390,52 @@
 
     </footer>
     <!-- Footer -->
+
     <!-- BOOTSTRAP SCRIPTS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <!-- BAGUETTEBOX JS -->
-    <script type="text/javascript" src="js/baguetteBox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <!-- BAGUETTEBOX JS -->
+        <script type="text/javascript" src="js/baguetteBox.min.js"></script>
+        <!-- carrusel galeria js -->
+        <script src="OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js" type="text/javascript"></script>
+        <script src="OwlCarousel2-2.3.4/dist/owl.carousel.js" type="text/javascript"></script>
 
+        <script type="text/javascript">
 
-    <!-- BAGUETTE BOX SCRIPT -->
-    <script>
-        baguetteBox.run('.galeria1');
-    </script>
+            baguetteBox.run('.galeria1');
+            baguetteBox.run('.galeria2');
+            baguetteBox.run('.galeria3');
+            baguetteBox.run('.galeria4');
+            baguetteBox.run('.galeria5');
+
+            var owl = $('.owl-carousel');
+            owl.owlCarousel({
+                loop:false,
+                margin:10,
+                autoplay:true,
+                autoplayTimeout:8000,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:2
+                    },            
+                    1000:{
+                        items:4
+                    }
+                }
+            });
+
+            owl.on('mousewheel', '.owl-stage', function (e) {
+                if (e.deltaY>0) {
+                    owl.trigger('next.owl');
+                } else {
+                    owl.trigger('prev.owl');
+                }
+                e.preventDefault();
+            });
+        </script>
 
 </body>
 
